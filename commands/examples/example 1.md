@@ -1,4 +1,5 @@
 # Examples
+## Example 1
 Available at [GitHub remote repo]()
 
 + To create a remote repo on GitHub and push it,
@@ -435,4 +436,3 @@ Opening https://github.com/40843245/GitHub-example-1/issues/1 in your browser.
 Then we will redirect to `https://github.com/40843245/GitHub-example-1/pull/1` and we will see `PR #1`
 
 <img width="689" height="480" alt="image" src="https://github.com/user-attachments/assets/e01a09a9-92e9-4964-b2ed-e0fd24faa658" />
-
