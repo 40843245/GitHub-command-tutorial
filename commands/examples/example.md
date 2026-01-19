@@ -130,3 +130,280 @@ branch 'master' set up to track 'origin/master'.
 ✓ Pushed commits to https://github.com/40843245/GitHub-example-1.git
 
 ```
+
+Let's get started to write first `C#` script.
+
++ First, we need to create a directory then create a console project under the directory.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ mkdir "MyAwesomeApp"
+
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ cd "MyAwesomeApp"
+
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub/MyAwesomeApp (master)
+$ dotnet new console
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Restoring D:\workspace\tutorial projects\GitHub\MyAwesomeApp\MyAwesomeApp.csproj:
+Restore succeeded.
+
+```
+
+Change back to root directory of local repo.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub/MyAwesomeApp (master)
+$ cd ..
+```
+
++ To push the empty project,
+
+we have to stage them.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git add .
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MyAwesomeApp/MyAwesomeApp.csproj
+        new file:   MyAwesomeApp/Program.cs
+        new file:   MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.dgspec.json
+        new file:   MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.g.props
+        new file:   MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.g.targets
+        new file:   MyAwesomeApp/obj/project.assets.json
+        new file:   MyAwesomeApp/obj/project.nuget.cache
+```
+
+Then commit it 
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git commit -m "Part 0: Create a new empty console project"
+[master 567a803] Part 0: Create a new empty console project
+ 7 files changed, 740 insertions(+)
+ create mode 100644 MyAwesomeApp/MyAwesomeApp.csproj
+ create mode 100644 MyAwesomeApp/Program.cs
+ create mode 100644 MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.dgspec.json
+ create mode 100644 MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.g.props
+ create mode 100644 MyAwesomeApp/obj/MyAwesomeApp.csproj.nuget.g.targets
+ create mode 100644 MyAwesomeApp/obj/project.assets.json
+ create mode 100644 MyAwesomeApp/obj/project.nuget.cache
+```
+
+Add tag named `v0.0.0` to the commit
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git tag v0.0.0
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git tag
+v0.0.0
+```
+
+After that, we can push it
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git push --atomic origin master v0.0.0
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 5.81 KiB | 457.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/40843245/GitHub-example-1.git
+   db22c10..567a803  master -> master
+ * [new tag]         v0.0.0 -> v0.0.0
+```
+
+Look at log to ensure that we have successfully pushed it.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git log --oneline
+567a803 (HEAD -> master, tag: v0.0.0, origin/master) Part 0: Create a new empty console project
+```
+
+In the next section, I will illustrate how to look at PR (pull request), create a new PR in `feature/pull-request-demo` etc.
+
++ First, we create a branch named `feature/pull-requests-demo` and switch branch.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git checkout -b feature/pull-requests-demo
+Switched to a new branch 'feature/pull-requests-demo'
+```
+
++ To look at all open PR.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ gh pr checkout
+no open pull requests in 40843245/GitHub-example-1
+```
+
++ To create PR from `feature/pull-requests-demo` branch to `master` branch,
+
+first we need to ensure that there are at least one commits (but unpushed) in `feature/pull-requests-demo` branch or `master` branch.
+
+> [!IMPORTANT]
+> Before creating PR from `A` branch to `master` branch,
+>
+> please always ensure that there are at least one unpushed commits in `A` branch or `master` branch,
+>
+> otherwise, there will get an error.
+
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git status
+On branch feature/pull-requests-demo
+Your branch is up to date with 'origin/feature/pull-requests-demo'.
+
+nothing to commit, working tree clean
+
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
+Since there are no commits between `feature/pull-requests-demo` branch and `master` branch, let's modify the `MyAwesomeApp/Program.cs` to
+
+```
+Console.WriteLine("This is written in 'feature/pull-requests-demo' branch");
+
+```
+
+and then commit it with tag v1.0.1.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
+$ git checkout feature/pull-requests-demo
+Switched to branch 'feature/pull-requests-demo'
+Your branch is up to date with 'origin/feature/pull-requests-demo'.
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ notepad "MyAwesomeApp/Program.cs"
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git add .
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git status
+On branch feature/pull-requests-demo
+Your branch is up to date with 'origin/feature/pull-requests-demo'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   MyAwesomeApp/Program.cs
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git commit -m "Part 1.1: Pratice Create PR"
+[feature/pull-requests-demo c141e5a] Part 1.1: Pratice Create PR
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git tag v1.0.1
+```
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ git  tag
+v0.0.0
+v1.0.1
+```
+
+After that, we can create PR from `feature/pull-requests-demo` branch.
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ gh pr create
+```
+
+Then it will ask you some question.
+
+For example,
+
+GitHub asks me `Where should we push the 'feature/pull-requests-demo' branch?`
+
+I answer we should push it in remote repo named `GitHub-example-1` in `40843245` GitHub account.
+
+```
+? Where should we push the 'feature/pull-requests-demo' branch? 40843245/GitHub-example-1
+
+Creating pull request for feature/pull-requests-demo into master in 40843245/GitHub-example-1
+```
+
+Then GitHub asks me the title pf PR
+
+I reponse `practice PR`
+
+```
+? Title (required) practice PR
+```
+
+Then GitHub asks me the body of PR.
+
+I click keyboard `e` to open notepad and write
+
+```
+Practice how to create PR.
+```
+
+After that, I save it, close it.
+
+```
+? Body <Received>
+```
+
+Lastly, I choose to submit
+
+```
+? What's next? Submit
+branch 'feature/pull-requests-demo' set up to track 'origin/feature/pull-requests-demo'.
+To https://github.com/40843245/GitHub-example-1.git
+   567a803..c141e5a  HEAD -> feature/pull-requests-demo
+https://github.com/40843245/GitHub-example-1/pull/1
+```
+
+And I see a PR with id `1` is created, url `https://github.com/40843245/GitHub-example-1/pull/1`
+
+<img width="599" height="466" alt="image" src="https://github.com/user-attachments/assets/9113aa62-f2b9-429a-a80c-b940e77e00a5" />
+ 
+db22c10 Initial commit: add .gitignore
+
+```
