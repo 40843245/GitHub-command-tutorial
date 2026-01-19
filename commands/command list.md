@@ -115,7 +115,34 @@ or use the third form iff you are familiar with the url routing and willing to s
 
 For more available option, see [GitHub CLI docs#gh repo create](https://cli.github.com/manual/gh_repo_create)
 
-### list all repo
+### list repos
+Format:
+
+```
+gh repo list <owner>? <options>?
+```
+
+where 
+
+`<owner>`: owner (i.e. user or organization) 
+
+or use its alias
+
+```
+gh repo ls
+```
+
+(as `gh repo list`)
+
++ To list all repos in current logged in account, NOT supply the `<owner>`
+
+```
+gh repo list
+```
+
+We can filter using options `<options>`
+
+For available options, see [GitHub CLI docs#gh repo list](https://cli.github.com/manual/gh_repo_list)
 
 ## PR (pull request)
 ### create PR
