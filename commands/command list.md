@@ -6,7 +6,8 @@
 gh auth login
 ```
 
-## clone the repo
+## repo
+### clone the repo
 + To clone the repo, type with this format
 
 ```
@@ -23,7 +24,7 @@ where
 
 `<repo-name>` is the repo name.
 
-## create a remote repo
+### create a remote repo
 + To create a remote repo, use one of these formats
 
 ```
@@ -113,6 +114,8 @@ or use the third form iff you are familiar with the url routing and willing to s
 > If `--source` long option is NOT supplied, it uses the default source path `.` (i.e. current working directory).
 
 For more available option, see [GitHub CLI docs#gh repo create](https://cli.github.com/manual/gh_repo_create)
+
+### list all repo
 
 ## PR (pull request)
 ### create PR
