@@ -412,3 +412,27 @@ I've merged the PR successfully and, of course, it is closed.
 
 <img width="721" height="488" alt="image" src="https://github.com/user-attachments/assets/5a2d5f46-aec1-45e8-950f-65a0019ef989" />
 
++ In next section, I'll illustrate that how to open the webbroswer.
+
+To open the webroswer and redirect to the root directory of current working remote repo,
+
+```
+userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
+$ gh browse
+Opening https://github.com/40843245/GitHub-example-1 in your browser.
+
+```
+
+<img width="944" height="509" alt="image" src="https://github.com/user-attachments/assets/025e93ba-3176-4b1d-be29-440965813e20" />
+
+To open PR 1 (if PR 1 exists) or the issue 1 (iff issue 1 exists),
+
+```
+$ gh browse 1
+Opening https://github.com/40843245/GitHub-example-1/issues/1 in your browser.
+```
+
+Then we will redirect to `https://github.com/40843245/GitHub-example-1/pull/1` and we will see `PR #1`
+
+<img width="689" height="480" alt="image" src="https://github.com/user-attachments/assets/e01a09a9-92e9-4964-b2ed-e0fd24faa658" />
+
