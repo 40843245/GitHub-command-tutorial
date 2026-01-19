@@ -1,6 +1,6 @@
 # Examples
 ## Example 1
-Available at [GitHub remote repo]()
+Available at [GitHub remote repo](https://github.com/40843245/GitHub-example-1)
 
 + To create a remote repo on GitHub and push it,
 
