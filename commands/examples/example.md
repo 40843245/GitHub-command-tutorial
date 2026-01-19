@@ -269,20 +269,22 @@ first we need to ensure that there are at least one commits (but unpushed) in `f
 > otherwise, there will get an error.
 
 ```
-
-```
 userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
 $ git status
 On branch feature/pull-requests-demo
 Your branch is up to date with 'origin/feature/pull-requests-demo'.
 
 nothing to commit, working tree clean
+```
 
+```
 userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (feature/pull-requests-demo)
 $ git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
+```
 
+```
 userJay30@ASUS-B1400CBNGW MINGW64 /d/workspace/tutorial projects/GitHub (master)
 $ git status
 On branch master
@@ -403,7 +405,10 @@ https://github.com/40843245/GitHub-example-1/pull/1
 And I see a PR with id `1` is created, url `https://github.com/40843245/GitHub-example-1/pull/1`
 
 <img width="599" height="466" alt="image" src="https://github.com/user-attachments/assets/9113aa62-f2b9-429a-a80c-b940e77e00a5" />
- 
-db22c10 Initial commit: add .gitignore
 
-```
+After I redirect to url `https://github.com/40843245/GitHub-example-1/pull/1` and click `Merge Pull Request` button (with green background) and follows its instruction,
+
+I've merged the PR successfully and, of course, it is closed.
+
+<img width="721" height="488" alt="image" src="https://github.com/user-attachments/assets/5a2d5f46-aec1-45e8-950f-65a0019ef989" />
+
