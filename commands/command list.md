@@ -187,3 +187,16 @@ where
 > On Window Command Prompts, it is always needed to quotate the `<command-to-be-executed>`.
 
 For more detailsm see [GitHub CLI docs#gh alias set](https://cli.github.com/manual/gh_alias_set)
+
+### list all alias
++ To list all aliases, use
+
+```
+gh alias list
+```
+
+or it alias
+
+```
+gh alias ls
+```
