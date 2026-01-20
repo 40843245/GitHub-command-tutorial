@@ -213,3 +213,32 @@ where
 `<alias-name>` : a descriptive name of the alias that will be delete.
 
 `--all` long options means that it will search all alias to delete
+
+### import alias
+To import alias from content of a YAML file or standard input, use `gh alias import`
+
+```
+gh alias import <file-name> <options>?
+```
+
+or 
+
+```
+gh alias import - <options>?
+```
+
+In the first form
+
+```
+gh alias import <file-name> <options>?
+```
+
+it will import alias from content of specifc YAML file `<file-name>`
+
+In the second form
+
+```
+gh alias import - <options>?
+```
+
+it will import alias from content of standard input. `-` means standard input.
