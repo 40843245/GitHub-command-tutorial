@@ -200,3 +200,16 @@ or it alias
 ```
 gh alias ls
 ```
+
+### delete alias
+To delete specific alias, use `gh alias delete`.
+
+```
+gh alias delete (<alias-name> | --all) <other-options>
+```
+
+where
+
+`<alias-name>` : a descriptive name of the alias that will be delete.
+
+`--all` long options means that it will search all alias to delete
