@@ -144,6 +144,21 @@ We can filter using options `<options>`
 
 For available options, see [GitHub CLI docs#gh repo list](https://cli.github.com/manual/gh_repo_list)
 
+### edit repo
++ To edit repo, use these format,
+
+```
+gh repo edit <repo-name>? <options>
+```
+
+where
+
+`<repo-name>`: the repo name.
+
+If the repo name `<repo-name>` is NOT supplied, the current working repo will be used.
+
+For available options, see [GitHub CLI docs#gh repo edit](https://cli.github.com/manual/gh_repo_edit)
+
 ## PR (pull request)
 ### create PR
 To create PR interactively, type
