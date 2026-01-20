@@ -168,3 +168,20 @@ gh pr create
 ```
 
 Then the terminal will ask you some important questions (such as PR title, PR body). Please give a brief and clear response.
+
+## alias
+### set an alias
++ To give an alias, use `gh alias set` using these formats
+
+```
+gh alias set <alias-name>='<command-to-be-executed>'
+```
+
+where
+
+`<alias-name>` : a descriptive name of the alias
+
+`<command-to-be-executed>`: command that will be executed once the alias is used.
+
+> [!NOTE]
+> On Window Command Prompts, it is always needed to quotate the `<command-to-be-executed>`.
